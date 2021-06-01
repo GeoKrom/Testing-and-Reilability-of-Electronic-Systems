@@ -1,0 +1,36 @@
+C:/Users/geokr/OneDrive/Desktop/Projects/Testing&RelElecSys/SDFFtb.v {1 {vlog -work work C:/Users/geokr/OneDrive/Desktop/Projects/Testing&RelElecSys/SDFFtb.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module SDFFtb
+
+Top level modules:
+	SDFFtb
+
+} {} {}} C:/Users/geokr/OneDrive/Desktop/Projects/Testing&RelElecSys/MyDFF.v {1 {vlog -work work C:/Users/geokr/OneDrive/Desktop/Projects/Testing&RelElecSys/MyDFF.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MyDFF
+
+Top level modules:
+	MyDFF
+
+} {} {}} C:/Users/geokr/OneDrive/Desktop/Projects/Testing&RelElecSys/SDFF.v {1 {vlog -work work C:/Users/geokr/OneDrive/Desktop/Projects/Testing&RelElecSys/SDFF.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module SDFF
+
+Top level modules:
+	SDFF
+
+} {} {}} C:/Users/geokr/OneDrive/Desktop/Projects/Testing&RelElecSys/CUT.v {1 {vlog -work work C:/Users/geokr/OneDrive/Desktop/Projects/Testing&RelElecSys/CUT.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module CUT
+
+Top level modules:
+	CUT
+
+} {} {}} C:/Users/geokr/OneDrive/Desktop/Projects/Testing&RelElecSys/MyDFFtb.v {1 {vlog -work work C:/Users/geokr/OneDrive/Desktop/Projects/Testing&RelElecSys/MyDFFtb.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MyDFFtb
+
+Top level modules:
+	MyDFFtb
+
+} {} {}}
