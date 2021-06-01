@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\geokr\OneDrive\Desktop\Projects\TestingRelElecSys\3.JTAG\simulation\modelsim
+vTapControllerFSM
+ICcQ>WKCBb;C[3ILB=_=2a0
+V]PiF[3LWzbI]OZz1PQWo82
+Z1 dC:\Users\geokr\OneDrive\Desktop\Projects\TestingRelElecSys\3.JTAG\simulation\modelsim
+w1622407572
+8C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG/TapControllerFSM.v
+FC:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG/TapControllerFSM.v
+L0 3
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@tap@controller@f@s@m
+!i10b 1
+!s100 dOb^n:A`hgX4bUCI3i^6H1
+!s85 0
+!s108 1622407622.980000
+!s107 C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG/TapControllerFSM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG|C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG/TapControllerFSM.v|
+!s101 -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG -O0
+vTapControllerFSMtb
+!i10b 1
+!s100 ZW6GT_eENk?hiNRR[KYTR3
+IJ<[oi6nO:KXb0JAHQBfb_1
+VkzV]O[PW`@VdjKL_lNiF62
+R1
+w1622406240
+8C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG/TapControllerFSMtb.v
+FC:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG/TapControllerFSMtb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1622407623.128000
+!s107 C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG/TapControllerFSMtb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG|C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG/TapControllerFSMtb.v|
+!s101 -O0
+R3
+R4
+n@tap@controller@f@s@mtb

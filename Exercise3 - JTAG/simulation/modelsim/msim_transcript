@@ -1,0 +1,37 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do JTAGArchitecture_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG/TapControllerFSM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module TapControllerFSM
+# 
+# Top level modules:
+# 	TapControllerFSM
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG/TapControllerFSMtb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module TapControllerFSMtb
+# 
+# Top level modules:
+# 	TapControllerFSMtb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  TapControllerFSMtb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps TapControllerFSMtb 
+# Loading work.TapControllerFSMtb
+# Loading work.TapControllerFSM
+# ** Error: (vsim-3053) C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/3.JTAG/TapControllerFSMtb.v(8): Illegal output or inout port connection for "port 'state'".
+# 
+#         Region: /TapControllerFSMtb/FSMInstance
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./JTAGArchitecture_run_msim_rtl_verilog.do PAUSED at line 12
