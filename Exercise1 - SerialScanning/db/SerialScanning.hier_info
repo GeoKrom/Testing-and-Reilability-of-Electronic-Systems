@@ -1,0 +1,90 @@
+|TRCUT
+SI => SI.IN1
+SE => SE.IN1
+CLK => CLK.IN1
+SO <= SO.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TRCUT|SDFFChain:sdffInstance
+CLK => CLK.IN4
+DI1 => DI1.IN1
+DI2 => DI2.IN1
+DI3 => DI3.IN1
+DI4 => DI4.IN1
+SI => SI.IN1
+SE => SE.IN4
+SO1 <= SO1.DB_MAX_OUTPUT_PORT_TYPE
+SO2 <= SO2.DB_MAX_OUTPUT_PORT_TYPE
+SO3 <= SO3.DB_MAX_OUTPUT_PORT_TYPE
+SO4 <= SDFF:sdff4.port4
+
+
+|TRCUT|SDFFChain:sdffInstance|SDFF:sdff1
+CLK => CLK.IN1
+DI => muxoutput.DATAA
+SI => muxoutput.DATAB
+SE => muxoutput.OUTPUTSELECT
+SO <= MyDFF:dffinstance.port2
+
+
+|TRCUT|SDFFChain:sdffInstance|SDFF:sdff1|MyDFF:dffinstance
+CLK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TRCUT|SDFFChain:sdffInstance|SDFF:sdff2
+CLK => CLK.IN1
+DI => muxoutput.DATAA
+SI => muxoutput.DATAB
+SE => muxoutput.OUTPUTSELECT
+SO <= MyDFF:dffinstance.port2
+
+
+|TRCUT|SDFFChain:sdffInstance|SDFF:sdff2|MyDFF:dffinstance
+CLK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TRCUT|SDFFChain:sdffInstance|SDFF:sdff3
+CLK => CLK.IN1
+DI => muxoutput.DATAA
+SI => muxoutput.DATAB
+SE => muxoutput.OUTPUTSELECT
+SO <= MyDFF:dffinstance.port2
+
+
+|TRCUT|SDFFChain:sdffInstance|SDFF:sdff3|MyDFF:dffinstance
+CLK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TRCUT|SDFFChain:sdffInstance|SDFF:sdff4
+CLK => CLK.IN1
+DI => muxoutput.DATAA
+SI => muxoutput.DATAB
+SE => muxoutput.OUTPUTSELECT
+SO <= MyDFF:dffinstance.port2
+
+
+|TRCUT|SDFFChain:sdffInstance|SDFF:sdff4|MyDFF:dffinstance
+CLK => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TRCUT|CUT:cutInstance
+a => E1.IN0
+a => E3.IN0
+b => E1.IN1
+b => E4.IN0
+c => E2.IN0
+c => E3.IN1
+d => E2.IN1
+d => E4.IN1
+i <= E5.DB_MAX_OUTPUT_PORT_TYPE
+j <= E6.DB_MAX_OUTPUT_PORT_TYPE
+
+
