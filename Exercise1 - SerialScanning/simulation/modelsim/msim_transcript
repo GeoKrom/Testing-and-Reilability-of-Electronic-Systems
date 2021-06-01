@@ -1,0 +1,92 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do SerialScanning_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/SDFF.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SDFF
+# 
+# Top level modules:
+# 	SDFF
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/MyDFF.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MyDFF
+# 
+# Top level modules:
+# 	MyDFF
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/CUT.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CUT
+# 
+# Top level modules:
+# 	CUT
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/SDFFChain.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SDFFChain
+# 
+# Top level modules:
+# 	SDFFChain
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/TRCUT.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module TRCUT
+# 
+# Top level modules:
+# 	TRCUT
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/TRCUTtb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module TRCUTtb
+# 
+# Top level modules:
+# 	TRCUTtb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  TRCUTtb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps TRCUTtb 
+# Loading work.TRCUTtb
+# Loading work.TRCUT
+# Loading work.SDFFChain
+# Loading work.SDFF
+# Loading work.MyDFF
+# Loading work.CUT
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: geokr  Hostname: DESKTOP-E3RQR0J  ProcessID: 10324
+# 
+#           Attempting to use alternate WLF file "./wlft6mx5h3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft6mx5h3
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit 
+# Simulation stop requested.
+# Simulation Breakpoint: Simulation stop requested.
+# MACRO ./SerialScanning_run_msim_rtl_verilog.do PAUSED at line 21
+add wave -position insertpoint  \
+sim:/TRCUTtb/trcutInstance/i_out \
+sim:/TRCUTtb/trcutInstance/j_out \
+sim:/TRCUTtb/trcutInstance/SOa \
+sim:/TRCUTtb/trcutInstance/SOb \
+sim:/TRCUTtb/trcutInstance/SOc
+restart
+run -all
+# Break key hit 
+# Break in Module TRCUTtb at C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/TRCUTtb.v line 14
+restart
+run -all
+# Break key hit 
+# Break in Module TRCUTtb in file C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/TRCUTtb.v

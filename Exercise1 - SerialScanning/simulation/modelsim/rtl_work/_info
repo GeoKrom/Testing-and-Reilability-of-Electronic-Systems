@@ -1,0 +1,131 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\geokr\OneDrive\Desktop\Projects\TestingRelElecSys\simulation\modelsim
+vCUT
+IEAfh3U`zDFYAY0Oe1NTeM1
+Vg8^hPzWOb^Q3jdRN?aHQ<2
+Z1 dC:\Users\geokr\OneDrive\Desktop\Projects\TestingRelElecSys\simulation\modelsim
+w1616795145
+8C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/CUT.v
+FC:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/CUT.v
+L0 3
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys -O0
+n@c@u@t
+!i10b 1
+!s100 PSl>^6N:::CjmWl71M`Oe1
+!s85 0
+!s108 1617103335.022000
+!s107 C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/CUT.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys|C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/CUT.v|
+!s101 -O0
+vMyDFF
+IgGbZhicf[KjAWHggMcH:42
+VS9<lSML<K3IJclMK0]3DD2
+R1
+w1616291697
+8C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/MyDFF.v
+FC:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/MyDFF.v
+L0 3
+R2
+r1
+31
+R3
+R4
+n@my@d@f@f
+!i10b 1
+!s100 X4N3X_RNLJShZ32Y[[MFJ3
+!s85 0
+!s108 1617103334.921000
+!s107 C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/MyDFF.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys|C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/MyDFF.v|
+!s101 -O0
+vSDFF
+I8KC<@Y];<NoOL>??<@99<1
+VS@WFTTR7e5DeVE?ITlThg2
+R1
+w1616291694
+8C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/SDFF.v
+FC:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/SDFF.v
+L0 3
+R2
+r1
+31
+R3
+n@s@d@f@f
+R4
+!i10b 1
+!s100 5dFi>NQo9J5o?9ZP90WP81
+!s85 0
+!s108 1617103334.821000
+!s107 C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/SDFF.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys|C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/SDFF.v|
+!s101 -O0
+vSDFFChain
+I30a390aCYi<Y3FaVLhT9J2
+VVZ^o>E^lULgnaa9^jidL03
+R1
+w1616419345
+8C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/SDFFChain.v
+FC:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/SDFFChain.v
+L0 3
+R2
+r1
+31
+R3
+R4
+n@s@d@f@f@chain
+!i10b 1
+!s100 hT@R:@?]A1dh_26=:?bF60
+!s85 0
+!s108 1617103335.134000
+!s107 C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/SDFFChain.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys|C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/SDFFChain.v|
+!s101 -O0
+vTRCUT
+IPOJ6NgG3NR]1mmnofc4z60
+VMfac^d8Z6L3YSDX^JcPdn3
+R1
+w1616718377
+8C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/TRCUT.v
+FC:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/TRCUT.v
+L0 3
+R2
+r1
+31
+R3
+R4
+n@t@r@c@u@t
+!i10b 1
+!s100 `oKOVjA0CVHLL^RTY]Vid0
+!s85 0
+!s108 1617103335.229000
+!s107 C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/TRCUT.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys|C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/TRCUT.v|
+!s101 -O0
+vTRCUTtb
+!i10b 1
+!s100 J[NU82XLjoCgZYTAdRcU?3
+IC_i<1amBKnYa?]eizcYjj2
+VO<AelA?IP`hHMENFF?``S2
+R1
+w1617103320
+8C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/TRCUTtb.v
+FC:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/TRCUTtb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1617103335.334000
+!s107 C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/TRCUTtb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys|C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/TRCUTtb.v|
+!s101 -O0
+R3
+R4
+n@t@r@c@u@ttb

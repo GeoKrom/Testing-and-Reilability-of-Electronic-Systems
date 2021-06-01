@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\geokr\OneDrive\Desktop\Projects\TestingRelElecSys\simulation\modelsim
+vSDFFChaintb
+!i10b 1
+!s100 choaTLF3Q<08LX@8[gX>S2
+I3LP0iSX;BOZzWZzoNbHd41
+Vdz@hL^WT5XbchlinVQ2YH0
+Z1 dC:\Users\geokr\OneDrive\Desktop\Projects\TestingRelElecSys\simulation\modelsim
+w1616441422
+8C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/SDFFChaintb.v
+FC:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/SDFFChaintb.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1616607526.039000
+!s107 C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/SDFFChaintb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys|C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/SDFFChaintb.v|
+!s101 -O0
+Z3 o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys -O0
+n@s@d@f@f@chaintb
+vTRCUT
+ILOOC>3bUT8HYZJk:j6bYH2
+VMfac^d8Z6L3YSDX^JcPdn3
+R1
+w1616607479
+8SerialScanning_6_1200mv_85c_slow.vo
+FSerialScanning_6_1200mv_85c_slow.vo
+L0 31
+R2
+r1
+31
+R3
+n@t@r@c@u@t
+!i10b 1
+!s100 i@WQkL5:fE`b6j30UVD5V2
+!s85 0
+!s108 1616607525.849000
+!s107 SerialScanning_6_1200mv_85c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|SerialScanning_6_1200mv_85c_slow.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
