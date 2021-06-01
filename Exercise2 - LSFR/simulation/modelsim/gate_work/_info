@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\geokr\OneDrive\Desktop\Projects\TestingRelElecSys\LSFR\simulation\modelsim
+vTRCUTwithMISR
+IABT5zeUCVkmHBgf88UOaN0
+V3ij`:mh^9;6_4m70WYIEj1
+Z1 dC:\Users\geokr\OneDrive\Desktop\Projects\TestingRelElecSys\LSFR\simulation\modelsim
+w1620649358
+8LSFRCircuit_6_1200mv_85c_slow.vo
+FLSFRCircuit_6_1200mv_85c_slow.vo
+L0 31
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@t@r@c@u@twith@m@i@s@r
+!i10b 1
+!s100 ]UEon4gbB=KIWQA@FJRNg1
+!s85 0
+!s108 1620651719.386000
+!s107 LSFRCircuit_6_1200mv_85c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|LSFRCircuit_6_1200mv_85c_slow.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vTRCUTwithMISRtb
+!i10b 1
+!s100 dX>C9YcEKO`DEk3f`bHcQ3
+IoB>0fQZVEG5I:[kc8Z^A]1
+V6gQL_NO<6l]6<Rj74IK2j0
+R1
+w1620651693
+8C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/TRCUTwithMISRtb.v
+FC:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/TRCUTwithMISRtb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1620651719.513000
+!s107 C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/TRCUTwithMISRtb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR|C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/TRCUTwithMISRtb.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR -O0
+n@t@r@c@u@twith@m@i@s@rtb

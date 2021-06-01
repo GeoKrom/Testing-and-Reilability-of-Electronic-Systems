@@ -1,0 +1,1658 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
+
+// DATE "05/11/2021 22:34:10"
+
+// 
+// Device: Altera EP4CGX15BF14C6 Package FBGA169
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module TRCUTwithMISR (
+	SE,
+	CLK,
+	sign);
+input 	SE;
+input 	CLK;
+output 	sign;
+
+// Design Ports Information
+// sign	=>  Location: PIN_L7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CLK	=>  Location: PIN_J7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SE	=>  Location: PIN_N9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("LSFRCircuit_6_1200mv_0c_v_slow.sdo");
+// synopsys translate_on
+
+wire sign_aoutput_o;
+wire CLK_ainput_o;
+wire CLK_ainputclkctrl_outclk;
+wire misrInstance_aMISR_a8_a_afeeder_combout;
+wire misrInstance_aMISR_a2_combout;
+wire misrInstance_aMISR_a10_a_afeeder_combout;
+wire misrInstance_aMISR_a11_a_afeeder_combout;
+wire misrInstance_aMISR_a12_a_afeeder_combout;
+wire misrInstance_aMISR_a13_a_afeeder_combout;
+wire misrInstance_aMISR_a1_combout;
+wire misrInstance_aMISR_a15_a_afeeder_combout;
+wire misrInstance_aMISR_a0_a_afeeder_combout;
+wire misrInstance_aMISR_a1_a_afeeder_combout;
+wire misrInstance_aMISR_a2_a_afeeder_combout;
+wire misrInstance_aMISR_a3_a_afeeder_combout;
+wire lsfrInstance_aLFSR_a4_a_afeeder_combout;
+wire lsfrInstance_aLFSR_a5_a_afeeder_combout;
+wire lsfrInstance_aLFSR_a2_combout;
+wire lsfrInstance_aLFSR_a7_a_afeeder_combout;
+wire lsfrInstance_aLFSR_a0_a_afeeder_combout;
+wire lsfrInstance_aLFSR_a1_a_afeeder_combout;
+wire lsfrInstance_aLFSR_a1_combout;
+wire lsfrInstance_aLFSR_a0_combout;
+wire trcutInstance_asdffInstance_asdff1_amuxoutput_a0_combout;
+wire trcutInstance_asdffInstance_asdff1_adffinstance_aQ_aq;
+wire SE_ainput_o;
+wire trcutInstance_asdffInstance_asdff2_amuxoutput_a0_combout;
+wire trcutInstance_asdffInstance_asdff2_adffinstance_aQ_aq;
+wire trcutInstance_asdffInstance_asdff3_amuxoutput_a0_combout;
+wire trcutInstance_asdffInstance_asdff3_adffinstance_aQ_aq;
+wire trcutInstance_asdffInstance_asdff4_amuxoutput_a0_combout;
+wire trcutInstance_asdffInstance_asdff4_adffinstance_aQ_aq;
+wire misrInstance_aMISR_a0_combout;
+wire misrInstance_aMISR_a5_a_afeeder_combout;
+wire misrInstance_aMISR_a6_a_afeeder_combout;
+wire misrInstance_aMISR_a7_a_afeeder_combout;
+wire [7:0] lsfrInstance_aLFSR;
+wire [15:0] misrInstance_aMISR;
+
+wire sign_aoutput_I_driver;
+wire CLK_ainput_I_driver;
+wire misrInstance_aMISR_a8_a_afeeder_DATAD_driver;
+wire misrInstance_aMISR_a8_a_CLK_driver;
+wire misrInstance_aMISR_a8_a_D_driver;
+wire misrInstance_aMISR_a2_DATAC_driver;
+wire misrInstance_aMISR_a2_DATAD_driver;
+wire misrInstance_aMISR_a9_a_CLK_driver;
+wire misrInstance_aMISR_a9_a_D_driver;
+wire misrInstance_aMISR_a10_a_afeeder_DATAD_driver;
+wire misrInstance_aMISR_a10_a_CLK_driver;
+wire misrInstance_aMISR_a10_a_D_driver;
+wire misrInstance_aMISR_a11_a_afeeder_DATAD_driver;
+wire misrInstance_aMISR_a11_a_CLK_driver;
+wire misrInstance_aMISR_a11_a_D_driver;
+wire misrInstance_aMISR_a12_a_afeeder_DATAD_driver;
+wire misrInstance_aMISR_a12_a_CLK_driver;
+wire misrInstance_aMISR_a12_a_D_driver;
+wire misrInstance_aMISR_a13_a_afeeder_DATAD_driver;
+wire misrInstance_aMISR_a13_a_CLK_driver;
+wire misrInstance_aMISR_a13_a_D_driver;
+wire misrInstance_aMISR_a1_DATAB_driver;
+wire misrInstance_aMISR_a1_DATAD_driver;
+wire misrInstance_aMISR_a14_a_CLK_driver;
+wire misrInstance_aMISR_a14_a_D_driver;
+wire misrInstance_aMISR_a15_a_afeeder_DATAC_driver;
+wire misrInstance_aMISR_a15_a_CLK_driver;
+wire misrInstance_aMISR_a15_a_D_driver;
+wire misrInstance_aMISR_a0_a_afeeder_DATAD_driver;
+wire misrInstance_aMISR_a0_a_CLK_driver;
+wire misrInstance_aMISR_a0_a_D_driver;
+wire misrInstance_aMISR_a1_a_afeeder_DATAD_driver;
+wire misrInstance_aMISR_a1_a_CLK_driver;
+wire misrInstance_aMISR_a1_a_D_driver;
+wire misrInstance_aMISR_a2_a_afeeder_DATAC_driver;
+wire misrInstance_aMISR_a2_a_CLK_driver;
+wire misrInstance_aMISR_a2_a_D_driver;
+wire misrInstance_aMISR_a3_a_afeeder_DATAC_driver;
+wire misrInstance_aMISR_a3_a_CLK_driver;
+wire misrInstance_aMISR_a3_a_D_driver;
+wire lsfrInstance_aLFSR_a4_a_afeeder_DATAD_driver;
+wire lsfrInstance_aLFSR_a4_a_CLK_driver;
+wire lsfrInstance_aLFSR_a4_a_D_driver;
+wire lsfrInstance_aLFSR_a5_a_afeeder_DATAD_driver;
+wire lsfrInstance_aLFSR_a5_a_CLK_driver;
+wire lsfrInstance_aLFSR_a5_a_D_driver;
+wire lsfrInstance_aLFSR_a2_DATAC_driver;
+wire lsfrInstance_aLFSR_a2_DATAD_driver;
+wire lsfrInstance_aLFSR_a6_a_CLK_driver;
+wire lsfrInstance_aLFSR_a6_a_D_driver;
+wire lsfrInstance_aLFSR_a7_a_afeeder_DATAD_driver;
+wire lsfrInstance_aLFSR_a7_a_CLK_driver;
+wire lsfrInstance_aLFSR_a7_a_D_driver;
+wire lsfrInstance_aLFSR_a0_a_afeeder_DATAD_driver;
+wire lsfrInstance_aLFSR_a0_a_CLK_driver;
+wire lsfrInstance_aLFSR_a0_a_D_driver;
+wire lsfrInstance_aLFSR_a1_a_afeeder_DATAD_driver;
+wire lsfrInstance_aLFSR_a1_a_CLK_driver;
+wire lsfrInstance_aLFSR_a1_a_D_driver;
+wire lsfrInstance_aLFSR_a1_DATAC_driver;
+wire lsfrInstance_aLFSR_a1_DATAD_driver;
+wire lsfrInstance_aLFSR_a2_a_CLK_driver;
+wire lsfrInstance_aLFSR_a2_a_D_driver;
+wire lsfrInstance_aLFSR_a0_DATAC_driver;
+wire lsfrInstance_aLFSR_a0_DATAD_driver;
+wire lsfrInstance_aLFSR_a3_a_CLK_driver;
+wire lsfrInstance_aLFSR_a3_a_D_driver;
+wire trcutInstance_asdffInstance_asdff1_amuxoutput_a0_DATAA_driver;
+wire trcutInstance_asdffInstance_asdff1_amuxoutput_a0_DATAD_driver;
+wire trcutInstance_asdffInstance_asdff1_adffinstance_aQ_CLK_driver;
+wire trcutInstance_asdffInstance_asdff1_adffinstance_aQ_D_driver;
+wire SE_ainput_I_driver;
+wire trcutInstance_asdffInstance_asdff2_amuxoutput_a0_DATAC_driver;
+wire trcutInstance_asdffInstance_asdff2_amuxoutput_a0_DATAD_driver;
+wire trcutInstance_asdffInstance_asdff2_adffinstance_aQ_CLK_driver;
+wire trcutInstance_asdffInstance_asdff2_adffinstance_aQ_D_driver;
+wire trcutInstance_asdffInstance_asdff3_amuxoutput_a0_DATAA_driver;
+wire trcutInstance_asdffInstance_asdff3_amuxoutput_a0_DATAD_driver;
+wire trcutInstance_asdffInstance_asdff3_adffinstance_aQ_CLK_driver;
+wire trcutInstance_asdffInstance_asdff3_adffinstance_aQ_D_driver;
+wire trcutInstance_asdffInstance_asdff4_amuxoutput_a0_DATAC_driver;
+wire trcutInstance_asdffInstance_asdff4_amuxoutput_a0_DATAD_driver;
+wire trcutInstance_asdffInstance_asdff4_adffinstance_aQ_CLK_driver;
+wire trcutInstance_asdffInstance_asdff4_adffinstance_aQ_D_driver;
+wire misrInstance_aMISR_a0_DATAC_driver;
+wire misrInstance_aMISR_a0_DATAD_driver;
+wire misrInstance_aMISR_a4_a_CLK_driver;
+wire misrInstance_aMISR_a4_a_D_driver;
+wire misrInstance_aMISR_a5_a_afeeder_DATAD_driver;
+wire misrInstance_aMISR_a5_a_CLK_driver;
+wire misrInstance_aMISR_a5_a_D_driver;
+wire misrInstance_aMISR_a6_a_afeeder_DATAD_driver;
+wire misrInstance_aMISR_a6_a_CLK_driver;
+wire misrInstance_aMISR_a6_a_D_driver;
+wire misrInstance_aMISR_a7_a_afeeder_DATAC_driver;
+wire misrInstance_aMISR_a7_a_CLK_driver;
+wire misrInstance_aMISR_a7_a_D_driver;
+wire [3:0] CLK_ainputclkctrl_INCLK_bus;
+
+cycloneiv_routing_wire sign_aoutput_I_routing_wire_inst (
+	.datain(misrInstance_aMISR[7]),
+	.dataout(sign_aoutput_I_driver));
+
+// Location: IOOBUF_X14_Y0_N2
+cycloneiv_io_obuf sign_aoutput(
+	.i(sign_aoutput_I_driver),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(sign_aoutput_o),
+	.obar());
+// synopsys translate_off
+defparam sign_aoutput.bus_hold = "false";
+defparam sign_aoutput.open_drain_output = "false";
+// synopsys translate_on
+
+cycloneiv_routing_wire CLK_ainput_I_routing_wire_inst (
+	.datain(CLK),
+	.dataout(CLK_ainput_I_driver));
+
+// Location: IOIBUF_X16_Y0_N15
+cycloneiv_io_ibuf CLK_ainput(
+	.i(CLK_ainput_I_driver),
+	.ibar(gnd),
+	.o(CLK_ainput_o));
+// synopsys translate_off
+defparam CLK_ainput.bus_hold = "false";
+defparam CLK_ainput.simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneiv_routing_wire CLK_ainputclkctrl_INCLK_a0_a_routing_wire_inst (
+	.datain(CLK_ainput_o),
+	.dataout(CLK_ainputclkctrl_INCLK_bus[0]));
+
+cycloneiv_routing_wire CLK_ainputclkctrl_INCLK_a1_a_routing_wire_inst (
+	.datain(vcc),
+	.dataout(CLK_ainputclkctrl_INCLK_bus[1]));
+
+cycloneiv_routing_wire CLK_ainputclkctrl_INCLK_a2_a_routing_wire_inst (
+	.datain(vcc),
+	.dataout(CLK_ainputclkctrl_INCLK_bus[2]));
+
+cycloneiv_routing_wire CLK_ainputclkctrl_INCLK_a3_a_routing_wire_inst (
+	.datain(vcc),
+	.dataout(CLK_ainputclkctrl_INCLK_bus[3]));
+
+// Location: CLKCTRL_G17
+cycloneiv_clkctrl CLK_ainputclkctrl(
+	.ena(vcc),
+	.inclk(CLK_ainputclkctrl_INCLK_bus),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(CLK_ainputclkctrl_outclk));
+// synopsys translate_off
+defparam CLK_ainputclkctrl.clock_type = "global clock";
+defparam CLK_ainputclkctrl.ena_register_mode = "none";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a8_a_afeeder_DATAD_routing_wire_inst (
+	.datain(misrInstance_aMISR[7]),
+	.dataout(misrInstance_aMISR_a8_a_afeeder_DATAD_driver));
+
+// Location: LCCOMB_X18_Y1_N22
+cycloneiv_lcell_comb misrInstance_aMISR_a8_a_afeeder(
+// Equation(s):
+// misrInstance_aMISR_a8_a_afeeder_combout = misrInstance_aMISR[7]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(misrInstance_aMISR_a8_a_afeeder_DATAD_driver),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a8_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a8_a_afeeder.lut_mask = 16'hFF00;
+defparam misrInstance_aMISR_a8_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a8_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a8_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a8_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a8_a_afeeder_combout),
+	.dataout(misrInstance_aMISR_a8_a_D_driver));
+
+// Location: FF_X18_Y1_N23
+dffeas misrInstance_aMISR_a8_a(
+	.clk(misrInstance_aMISR_a8_a_CLK_driver),
+	.d(misrInstance_aMISR_a8_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[8]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a8_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a8_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a2_DATAC_routing_wire_inst (
+	.datain(misrInstance_aMISR[8]),
+	.dataout(misrInstance_aMISR_a2_DATAC_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a2_DATAD_routing_wire_inst (
+	.datain(misrInstance_aMISR[15]),
+	.dataout(misrInstance_aMISR_a2_DATAD_driver));
+
+// Location: LCCOMB_X18_Y1_N16
+cycloneiv_lcell_comb misrInstance_aMISR_a2(
+// Equation(s):
+// misrInstance_aMISR_a2_combout = misrInstance_aMISR[8] $ (misrInstance_aMISR[15])
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(misrInstance_aMISR_a2_DATAC_driver),
+	.datad(misrInstance_aMISR_a2_DATAD_driver),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a2_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a2.lut_mask = 16'h0FF0;
+defparam misrInstance_aMISR_a2.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a9_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a9_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a9_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a2_combout),
+	.dataout(misrInstance_aMISR_a9_a_D_driver));
+
+// Location: FF_X18_Y1_N17
+dffeas misrInstance_aMISR_a9_a(
+	.clk(misrInstance_aMISR_a9_a_CLK_driver),
+	.d(misrInstance_aMISR_a9_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[9]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a9_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a9_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a10_a_afeeder_DATAD_routing_wire_inst (
+	.datain(misrInstance_aMISR[9]),
+	.dataout(misrInstance_aMISR_a10_a_afeeder_DATAD_driver));
+
+// Location: LCCOMB_X18_Y1_N2
+cycloneiv_lcell_comb misrInstance_aMISR_a10_a_afeeder(
+// Equation(s):
+// misrInstance_aMISR_a10_a_afeeder_combout = misrInstance_aMISR[9]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(misrInstance_aMISR_a10_a_afeeder_DATAD_driver),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a10_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a10_a_afeeder.lut_mask = 16'hFF00;
+defparam misrInstance_aMISR_a10_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a10_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a10_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a10_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a10_a_afeeder_combout),
+	.dataout(misrInstance_aMISR_a10_a_D_driver));
+
+// Location: FF_X18_Y1_N3
+dffeas misrInstance_aMISR_a10_a(
+	.clk(misrInstance_aMISR_a10_a_CLK_driver),
+	.d(misrInstance_aMISR_a10_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[10]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a10_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a10_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a11_a_afeeder_DATAD_routing_wire_inst (
+	.datain(misrInstance_aMISR[10]),
+	.dataout(misrInstance_aMISR_a11_a_afeeder_DATAD_driver));
+
+// Location: LCCOMB_X18_Y1_N12
+cycloneiv_lcell_comb misrInstance_aMISR_a11_a_afeeder(
+// Equation(s):
+// misrInstance_aMISR_a11_a_afeeder_combout = misrInstance_aMISR[10]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(misrInstance_aMISR_a11_a_afeeder_DATAD_driver),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a11_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a11_a_afeeder.lut_mask = 16'hFF00;
+defparam misrInstance_aMISR_a11_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a11_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a11_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a11_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a11_a_afeeder_combout),
+	.dataout(misrInstance_aMISR_a11_a_D_driver));
+
+// Location: FF_X18_Y1_N13
+dffeas misrInstance_aMISR_a11_a(
+	.clk(misrInstance_aMISR_a11_a_CLK_driver),
+	.d(misrInstance_aMISR_a11_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[11]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a11_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a11_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a12_a_afeeder_DATAD_routing_wire_inst (
+	.datain(misrInstance_aMISR[11]),
+	.dataout(misrInstance_aMISR_a12_a_afeeder_DATAD_driver));
+
+// Location: LCCOMB_X18_Y1_N10
+cycloneiv_lcell_comb misrInstance_aMISR_a12_a_afeeder(
+// Equation(s):
+// misrInstance_aMISR_a12_a_afeeder_combout = misrInstance_aMISR[11]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(misrInstance_aMISR_a12_a_afeeder_DATAD_driver),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a12_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a12_a_afeeder.lut_mask = 16'hFF00;
+defparam misrInstance_aMISR_a12_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a12_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a12_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a12_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a12_a_afeeder_combout),
+	.dataout(misrInstance_aMISR_a12_a_D_driver));
+
+// Location: FF_X18_Y1_N11
+dffeas misrInstance_aMISR_a12_a(
+	.clk(misrInstance_aMISR_a12_a_CLK_driver),
+	.d(misrInstance_aMISR_a12_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[12]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a12_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a12_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a13_a_afeeder_DATAD_routing_wire_inst (
+	.datain(misrInstance_aMISR[12]),
+	.dataout(misrInstance_aMISR_a13_a_afeeder_DATAD_driver));
+
+// Location: LCCOMB_X18_Y1_N0
+cycloneiv_lcell_comb misrInstance_aMISR_a13_a_afeeder(
+// Equation(s):
+// misrInstance_aMISR_a13_a_afeeder_combout = misrInstance_aMISR[12]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(misrInstance_aMISR_a13_a_afeeder_DATAD_driver),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a13_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a13_a_afeeder.lut_mask = 16'hFF00;
+defparam misrInstance_aMISR_a13_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a13_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a13_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a13_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a13_a_afeeder_combout),
+	.dataout(misrInstance_aMISR_a13_a_D_driver));
+
+// Location: FF_X18_Y1_N1
+dffeas misrInstance_aMISR_a13_a(
+	.clk(misrInstance_aMISR_a13_a_CLK_driver),
+	.d(misrInstance_aMISR_a13_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[13]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a13_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a13_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a1_DATAB_routing_wire_inst (
+	.datain(misrInstance_aMISR[13]),
+	.dataout(misrInstance_aMISR_a1_DATAB_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a1_DATAD_routing_wire_inst (
+	.datain(misrInstance_aMISR[15]),
+	.dataout(misrInstance_aMISR_a1_DATAD_driver));
+
+// Location: LCCOMB_X18_Y1_N14
+cycloneiv_lcell_comb misrInstance_aMISR_a1(
+// Equation(s):
+// misrInstance_aMISR_a1_combout = misrInstance_aMISR[13] $ (misrInstance_aMISR[15])
+
+	.dataa(gnd),
+	.datab(misrInstance_aMISR_a1_DATAB_driver),
+	.datac(gnd),
+	.datad(misrInstance_aMISR_a1_DATAD_driver),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a1_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a1.lut_mask = 16'h33CC;
+defparam misrInstance_aMISR_a1.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a14_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a14_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a14_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a1_combout),
+	.dataout(misrInstance_aMISR_a14_a_D_driver));
+
+// Location: FF_X18_Y1_N15
+dffeas misrInstance_aMISR_a14_a(
+	.clk(misrInstance_aMISR_a14_a_CLK_driver),
+	.d(misrInstance_aMISR_a14_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[14]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a14_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a14_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a15_a_afeeder_DATAC_routing_wire_inst (
+	.datain(misrInstance_aMISR[14]),
+	.dataout(misrInstance_aMISR_a15_a_afeeder_DATAC_driver));
+
+// Location: LCCOMB_X18_Y1_N20
+cycloneiv_lcell_comb misrInstance_aMISR_a15_a_afeeder(
+// Equation(s):
+// misrInstance_aMISR_a15_a_afeeder_combout = misrInstance_aMISR[14]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(misrInstance_aMISR_a15_a_afeeder_DATAC_driver),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a15_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a15_a_afeeder.lut_mask = 16'hF0F0;
+defparam misrInstance_aMISR_a15_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a15_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a15_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a15_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a15_a_afeeder_combout),
+	.dataout(misrInstance_aMISR_a15_a_D_driver));
+
+// Location: FF_X18_Y1_N21
+dffeas misrInstance_aMISR_a15_a(
+	.clk(misrInstance_aMISR_a15_a_CLK_driver),
+	.d(misrInstance_aMISR_a15_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[15]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a15_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a15_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a0_a_afeeder_DATAD_routing_wire_inst (
+	.datain(misrInstance_aMISR[15]),
+	.dataout(misrInstance_aMISR_a0_a_afeeder_DATAD_driver));
+
+// Location: LCCOMB_X18_Y1_N18
+cycloneiv_lcell_comb misrInstance_aMISR_a0_a_afeeder(
+// Equation(s):
+// misrInstance_aMISR_a0_a_afeeder_combout = misrInstance_aMISR[15]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(misrInstance_aMISR_a0_a_afeeder_DATAD_driver),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a0_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a0_a_afeeder.lut_mask = 16'hFF00;
+defparam misrInstance_aMISR_a0_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a0_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a0_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a0_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a0_a_afeeder_combout),
+	.dataout(misrInstance_aMISR_a0_a_D_driver));
+
+// Location: FF_X18_Y1_N19
+dffeas misrInstance_aMISR_a0_a(
+	.clk(misrInstance_aMISR_a0_a_CLK_driver),
+	.d(misrInstance_aMISR_a0_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a0_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a0_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a1_a_afeeder_DATAD_routing_wire_inst (
+	.datain(misrInstance_aMISR[0]),
+	.dataout(misrInstance_aMISR_a1_a_afeeder_DATAD_driver));
+
+// Location: LCCOMB_X18_Y1_N8
+cycloneiv_lcell_comb misrInstance_aMISR_a1_a_afeeder(
+// Equation(s):
+// misrInstance_aMISR_a1_a_afeeder_combout = misrInstance_aMISR[0]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(misrInstance_aMISR_a1_a_afeeder_DATAD_driver),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a1_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a1_a_afeeder.lut_mask = 16'hFF00;
+defparam misrInstance_aMISR_a1_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a1_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a1_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a1_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a1_a_afeeder_combout),
+	.dataout(misrInstance_aMISR_a1_a_D_driver));
+
+// Location: FF_X18_Y1_N9
+dffeas misrInstance_aMISR_a1_a(
+	.clk(misrInstance_aMISR_a1_a_CLK_driver),
+	.d(misrInstance_aMISR_a1_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a1_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a1_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a2_a_afeeder_DATAC_routing_wire_inst (
+	.datain(misrInstance_aMISR[1]),
+	.dataout(misrInstance_aMISR_a2_a_afeeder_DATAC_driver));
+
+// Location: LCCOMB_X18_Y1_N30
+cycloneiv_lcell_comb misrInstance_aMISR_a2_a_afeeder(
+// Equation(s):
+// misrInstance_aMISR_a2_a_afeeder_combout = misrInstance_aMISR[1]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(misrInstance_aMISR_a2_a_afeeder_DATAC_driver),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a2_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a2_a_afeeder.lut_mask = 16'hF0F0;
+defparam misrInstance_aMISR_a2_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a2_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a2_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a2_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a2_a_afeeder_combout),
+	.dataout(misrInstance_aMISR_a2_a_D_driver));
+
+// Location: FF_X18_Y1_N31
+dffeas misrInstance_aMISR_a2_a(
+	.clk(misrInstance_aMISR_a2_a_CLK_driver),
+	.d(misrInstance_aMISR_a2_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a2_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a2_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a3_a_afeeder_DATAC_routing_wire_inst (
+	.datain(misrInstance_aMISR[2]),
+	.dataout(misrInstance_aMISR_a3_a_afeeder_DATAC_driver));
+
+// Location: LCCOMB_X18_Y1_N4
+cycloneiv_lcell_comb misrInstance_aMISR_a3_a_afeeder(
+// Equation(s):
+// misrInstance_aMISR_a3_a_afeeder_combout = misrInstance_aMISR[2]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(misrInstance_aMISR_a3_a_afeeder_DATAC_driver),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a3_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a3_a_afeeder.lut_mask = 16'hF0F0;
+defparam misrInstance_aMISR_a3_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a3_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a3_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a3_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a3_a_afeeder_combout),
+	.dataout(misrInstance_aMISR_a3_a_D_driver));
+
+// Location: FF_X18_Y1_N5
+dffeas misrInstance_aMISR_a3_a(
+	.clk(misrInstance_aMISR_a3_a_CLK_driver),
+	.d(misrInstance_aMISR_a3_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a3_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a3_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a4_a_afeeder_DATAD_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR[3]),
+	.dataout(lsfrInstance_aLFSR_a4_a_afeeder_DATAD_driver));
+
+// Location: LCCOMB_X19_Y1_N2
+cycloneiv_lcell_comb lsfrInstance_aLFSR_a4_a_afeeder(
+// Equation(s):
+// lsfrInstance_aLFSR_a4_a_afeeder_combout = lsfrInstance_aLFSR[3]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(lsfrInstance_aLFSR_a4_a_afeeder_DATAD_driver),
+	.cin(gnd),
+	.combout(lsfrInstance_aLFSR_a4_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a4_a_afeeder.lut_mask = 16'hFF00;
+defparam lsfrInstance_aLFSR_a4_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a4_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(lsfrInstance_aLFSR_a4_a_CLK_driver));
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a4_a_D_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR_a4_a_afeeder_combout),
+	.dataout(lsfrInstance_aLFSR_a4_a_D_driver));
+
+// Location: FF_X19_Y1_N3
+dffeas lsfrInstance_aLFSR_a4_a(
+	.clk(lsfrInstance_aLFSR_a4_a_CLK_driver),
+	.d(lsfrInstance_aLFSR_a4_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(lsfrInstance_aLFSR[4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a4_a.is_wysiwyg = "true";
+defparam lsfrInstance_aLFSR_a4_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a5_a_afeeder_DATAD_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR[4]),
+	.dataout(lsfrInstance_aLFSR_a5_a_afeeder_DATAD_driver));
+
+// Location: LCCOMB_X19_Y1_N4
+cycloneiv_lcell_comb lsfrInstance_aLFSR_a5_a_afeeder(
+// Equation(s):
+// lsfrInstance_aLFSR_a5_a_afeeder_combout = lsfrInstance_aLFSR[4]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(lsfrInstance_aLFSR_a5_a_afeeder_DATAD_driver),
+	.cin(gnd),
+	.combout(lsfrInstance_aLFSR_a5_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a5_a_afeeder.lut_mask = 16'hFF00;
+defparam lsfrInstance_aLFSR_a5_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a5_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(lsfrInstance_aLFSR_a5_a_CLK_driver));
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a5_a_D_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR_a5_a_afeeder_combout),
+	.dataout(lsfrInstance_aLFSR_a5_a_D_driver));
+
+// Location: FF_X19_Y1_N5
+dffeas lsfrInstance_aLFSR_a5_a(
+	.clk(lsfrInstance_aLFSR_a5_a_CLK_driver),
+	.d(lsfrInstance_aLFSR_a5_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(lsfrInstance_aLFSR[5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a5_a.is_wysiwyg = "true";
+defparam lsfrInstance_aLFSR_a5_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a2_DATAC_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR[5]),
+	.dataout(lsfrInstance_aLFSR_a2_DATAC_driver));
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a2_DATAD_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR[7]),
+	.dataout(lsfrInstance_aLFSR_a2_DATAD_driver));
+
+// Location: LCCOMB_X19_Y1_N20
+cycloneiv_lcell_comb lsfrInstance_aLFSR_a2(
+// Equation(s):
+// lsfrInstance_aLFSR_a2_combout = lsfrInstance_aLFSR[5] $ (lsfrInstance_aLFSR[7])
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(lsfrInstance_aLFSR_a2_DATAC_driver),
+	.datad(lsfrInstance_aLFSR_a2_DATAD_driver),
+	.cin(gnd),
+	.combout(lsfrInstance_aLFSR_a2_combout),
+	.cout());
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a2.lut_mask = 16'h0FF0;
+defparam lsfrInstance_aLFSR_a2.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a6_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(lsfrInstance_aLFSR_a6_a_CLK_driver));
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a6_a_D_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR_a2_combout),
+	.dataout(lsfrInstance_aLFSR_a6_a_D_driver));
+
+// Location: FF_X19_Y1_N21
+dffeas lsfrInstance_aLFSR_a6_a(
+	.clk(lsfrInstance_aLFSR_a6_a_CLK_driver),
+	.d(lsfrInstance_aLFSR_a6_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(lsfrInstance_aLFSR[6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a6_a.is_wysiwyg = "true";
+defparam lsfrInstance_aLFSR_a6_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a7_a_afeeder_DATAD_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR[6]),
+	.dataout(lsfrInstance_aLFSR_a7_a_afeeder_DATAD_driver));
+
+// Location: LCCOMB_X19_Y1_N24
+cycloneiv_lcell_comb lsfrInstance_aLFSR_a7_a_afeeder(
+// Equation(s):
+// lsfrInstance_aLFSR_a7_a_afeeder_combout = lsfrInstance_aLFSR[6]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(lsfrInstance_aLFSR_a7_a_afeeder_DATAD_driver),
+	.cin(gnd),
+	.combout(lsfrInstance_aLFSR_a7_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a7_a_afeeder.lut_mask = 16'hFF00;
+defparam lsfrInstance_aLFSR_a7_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a7_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(lsfrInstance_aLFSR_a7_a_CLK_driver));
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a7_a_D_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR_a7_a_afeeder_combout),
+	.dataout(lsfrInstance_aLFSR_a7_a_D_driver));
+
+// Location: FF_X19_Y1_N25
+dffeas lsfrInstance_aLFSR_a7_a(
+	.clk(lsfrInstance_aLFSR_a7_a_CLK_driver),
+	.d(lsfrInstance_aLFSR_a7_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(lsfrInstance_aLFSR[7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a7_a.is_wysiwyg = "true";
+defparam lsfrInstance_aLFSR_a7_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a0_a_afeeder_DATAD_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR[7]),
+	.dataout(lsfrInstance_aLFSR_a0_a_afeeder_DATAD_driver));
+
+// Location: LCCOMB_X19_Y1_N18
+cycloneiv_lcell_comb lsfrInstance_aLFSR_a0_a_afeeder(
+// Equation(s):
+// lsfrInstance_aLFSR_a0_a_afeeder_combout = lsfrInstance_aLFSR[7]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(lsfrInstance_aLFSR_a0_a_afeeder_DATAD_driver),
+	.cin(gnd),
+	.combout(lsfrInstance_aLFSR_a0_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a0_a_afeeder.lut_mask = 16'hFF00;
+defparam lsfrInstance_aLFSR_a0_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a0_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(lsfrInstance_aLFSR_a0_a_CLK_driver));
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a0_a_D_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR_a0_a_afeeder_combout),
+	.dataout(lsfrInstance_aLFSR_a0_a_D_driver));
+
+// Location: FF_X19_Y1_N19
+dffeas lsfrInstance_aLFSR_a0_a(
+	.clk(lsfrInstance_aLFSR_a0_a_CLK_driver),
+	.d(lsfrInstance_aLFSR_a0_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(lsfrInstance_aLFSR[0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a0_a.is_wysiwyg = "true";
+defparam lsfrInstance_aLFSR_a0_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a1_a_afeeder_DATAD_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR[0]),
+	.dataout(lsfrInstance_aLFSR_a1_a_afeeder_DATAD_driver));
+
+// Location: LCCOMB_X19_Y1_N30
+cycloneiv_lcell_comb lsfrInstance_aLFSR_a1_a_afeeder(
+// Equation(s):
+// lsfrInstance_aLFSR_a1_a_afeeder_combout = lsfrInstance_aLFSR[0]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(lsfrInstance_aLFSR_a1_a_afeeder_DATAD_driver),
+	.cin(gnd),
+	.combout(lsfrInstance_aLFSR_a1_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a1_a_afeeder.lut_mask = 16'hFF00;
+defparam lsfrInstance_aLFSR_a1_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a1_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(lsfrInstance_aLFSR_a1_a_CLK_driver));
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a1_a_D_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR_a1_a_afeeder_combout),
+	.dataout(lsfrInstance_aLFSR_a1_a_D_driver));
+
+// Location: FF_X19_Y1_N31
+dffeas lsfrInstance_aLFSR_a1_a(
+	.clk(lsfrInstance_aLFSR_a1_a_CLK_driver),
+	.d(lsfrInstance_aLFSR_a1_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(lsfrInstance_aLFSR[1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a1_a.is_wysiwyg = "true";
+defparam lsfrInstance_aLFSR_a1_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a1_DATAC_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR[1]),
+	.dataout(lsfrInstance_aLFSR_a1_DATAC_driver));
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a1_DATAD_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR[7]),
+	.dataout(lsfrInstance_aLFSR_a1_DATAD_driver));
+
+// Location: LCCOMB_X19_Y1_N14
+cycloneiv_lcell_comb lsfrInstance_aLFSR_a1(
+// Equation(s):
+// lsfrInstance_aLFSR_a1_combout = lsfrInstance_aLFSR[1] $ (lsfrInstance_aLFSR[7])
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(lsfrInstance_aLFSR_a1_DATAC_driver),
+	.datad(lsfrInstance_aLFSR_a1_DATAD_driver),
+	.cin(gnd),
+	.combout(lsfrInstance_aLFSR_a1_combout),
+	.cout());
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a1.lut_mask = 16'h0FF0;
+defparam lsfrInstance_aLFSR_a1.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a2_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(lsfrInstance_aLFSR_a2_a_CLK_driver));
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a2_a_D_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR_a1_combout),
+	.dataout(lsfrInstance_aLFSR_a2_a_D_driver));
+
+// Location: FF_X19_Y1_N15
+dffeas lsfrInstance_aLFSR_a2_a(
+	.clk(lsfrInstance_aLFSR_a2_a_CLK_driver),
+	.d(lsfrInstance_aLFSR_a2_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(lsfrInstance_aLFSR[2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a2_a.is_wysiwyg = "true";
+defparam lsfrInstance_aLFSR_a2_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a0_DATAC_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR[2]),
+	.dataout(lsfrInstance_aLFSR_a0_DATAC_driver));
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a0_DATAD_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR[7]),
+	.dataout(lsfrInstance_aLFSR_a0_DATAD_driver));
+
+// Location: LCCOMB_X19_Y1_N0
+cycloneiv_lcell_comb lsfrInstance_aLFSR_a0(
+// Equation(s):
+// lsfrInstance_aLFSR_a0_combout = lsfrInstance_aLFSR[2] $ (lsfrInstance_aLFSR[7])
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(lsfrInstance_aLFSR_a0_DATAC_driver),
+	.datad(lsfrInstance_aLFSR_a0_DATAD_driver),
+	.cin(gnd),
+	.combout(lsfrInstance_aLFSR_a0_combout),
+	.cout());
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a0.lut_mask = 16'h0FF0;
+defparam lsfrInstance_aLFSR_a0.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a3_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(lsfrInstance_aLFSR_a3_a_CLK_driver));
+
+cycloneiv_routing_wire lsfrInstance_aLFSR_a3_a_D_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR_a0_combout),
+	.dataout(lsfrInstance_aLFSR_a3_a_D_driver));
+
+// Location: FF_X19_Y1_N1
+dffeas lsfrInstance_aLFSR_a3_a(
+	.clk(lsfrInstance_aLFSR_a3_a_CLK_driver),
+	.d(lsfrInstance_aLFSR_a3_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(lsfrInstance_aLFSR[3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam lsfrInstance_aLFSR_a3_a.is_wysiwyg = "true";
+defparam lsfrInstance_aLFSR_a3_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff1_amuxoutput_a0_DATAA_routing_wire_inst (
+	.datain(SE_ainput_o),
+	.dataout(trcutInstance_asdffInstance_asdff1_amuxoutput_a0_DATAA_driver));
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff1_amuxoutput_a0_DATAD_routing_wire_inst (
+	.datain(lsfrInstance_aLFSR[3]),
+	.dataout(trcutInstance_asdffInstance_asdff1_amuxoutput_a0_DATAD_driver));
+
+// Location: LCCOMB_X19_Y1_N26
+cycloneiv_lcell_comb trcutInstance_asdffInstance_asdff1_amuxoutput_a0(
+// Equation(s):
+// trcutInstance_asdffInstance_asdff1_amuxoutput_a0_combout = (lsfrInstance_aLFSR[3]) # (!SE_ainput_o)
+
+	.dataa(trcutInstance_asdffInstance_asdff1_amuxoutput_a0_DATAA_driver),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(trcutInstance_asdffInstance_asdff1_amuxoutput_a0_DATAD_driver),
+	.cin(gnd),
+	.combout(trcutInstance_asdffInstance_asdff1_amuxoutput_a0_combout),
+	.cout());
+// synopsys translate_off
+defparam trcutInstance_asdffInstance_asdff1_amuxoutput_a0.lut_mask = 16'hFF55;
+defparam trcutInstance_asdffInstance_asdff1_amuxoutput_a0.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff1_adffinstance_aQ_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(trcutInstance_asdffInstance_asdff1_adffinstance_aQ_CLK_driver));
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff1_adffinstance_aQ_D_routing_wire_inst (
+	.datain(trcutInstance_asdffInstance_asdff1_amuxoutput_a0_combout),
+	.dataout(trcutInstance_asdffInstance_asdff1_adffinstance_aQ_D_driver));
+
+// Location: FF_X19_Y1_N27
+dffeas trcutInstance_asdffInstance_asdff1_adffinstance_aQ(
+	.clk(trcutInstance_asdffInstance_asdff1_adffinstance_aQ_CLK_driver),
+	.d(trcutInstance_asdffInstance_asdff1_adffinstance_aQ_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(trcutInstance_asdffInstance_asdff1_adffinstance_aQ_aq),
+	.prn(vcc));
+// synopsys translate_off
+defparam trcutInstance_asdffInstance_asdff1_adffinstance_aQ.is_wysiwyg = "true";
+defparam trcutInstance_asdffInstance_asdff1_adffinstance_aQ.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire SE_ainput_I_routing_wire_inst (
+	.datain(SE),
+	.dataout(SE_ainput_I_driver));
+
+// Location: IOIBUF_X20_Y0_N1
+cycloneiv_io_ibuf SE_ainput(
+	.i(SE_ainput_I_driver),
+	.ibar(gnd),
+	.o(SE_ainput_o));
+// synopsys translate_off
+defparam SE_ainput.bus_hold = "false";
+defparam SE_ainput.simulate_z_as = "z";
+// synopsys translate_on
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff2_amuxoutput_a0_DATAC_routing_wire_inst (
+	.datain(trcutInstance_asdffInstance_asdff1_adffinstance_aQ_aq),
+	.dataout(trcutInstance_asdffInstance_asdff2_amuxoutput_a0_DATAC_driver));
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff2_amuxoutput_a0_DATAD_routing_wire_inst (
+	.datain(SE_ainput_o),
+	.dataout(trcutInstance_asdffInstance_asdff2_amuxoutput_a0_DATAD_driver));
+
+// Location: LCCOMB_X19_Y1_N12
+cycloneiv_lcell_comb trcutInstance_asdffInstance_asdff2_amuxoutput_a0(
+// Equation(s):
+// trcutInstance_asdffInstance_asdff2_amuxoutput_a0_combout = (trcutInstance_asdffInstance_asdff1_adffinstance_aQ_aq & SE_ainput_o)
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(trcutInstance_asdffInstance_asdff2_amuxoutput_a0_DATAC_driver),
+	.datad(trcutInstance_asdffInstance_asdff2_amuxoutput_a0_DATAD_driver),
+	.cin(gnd),
+	.combout(trcutInstance_asdffInstance_asdff2_amuxoutput_a0_combout),
+	.cout());
+// synopsys translate_off
+defparam trcutInstance_asdffInstance_asdff2_amuxoutput_a0.lut_mask = 16'hF000;
+defparam trcutInstance_asdffInstance_asdff2_amuxoutput_a0.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff2_adffinstance_aQ_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(trcutInstance_asdffInstance_asdff2_adffinstance_aQ_CLK_driver));
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff2_adffinstance_aQ_D_routing_wire_inst (
+	.datain(trcutInstance_asdffInstance_asdff2_amuxoutput_a0_combout),
+	.dataout(trcutInstance_asdffInstance_asdff2_adffinstance_aQ_D_driver));
+
+// Location: FF_X19_Y1_N13
+dffeas trcutInstance_asdffInstance_asdff2_adffinstance_aQ(
+	.clk(trcutInstance_asdffInstance_asdff2_adffinstance_aQ_CLK_driver),
+	.d(trcutInstance_asdffInstance_asdff2_adffinstance_aQ_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(trcutInstance_asdffInstance_asdff2_adffinstance_aQ_aq),
+	.prn(vcc));
+// synopsys translate_off
+defparam trcutInstance_asdffInstance_asdff2_adffinstance_aQ.is_wysiwyg = "true";
+defparam trcutInstance_asdffInstance_asdff2_adffinstance_aQ.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff3_amuxoutput_a0_DATAA_routing_wire_inst (
+	.datain(SE_ainput_o),
+	.dataout(trcutInstance_asdffInstance_asdff3_amuxoutput_a0_DATAA_driver));
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff3_amuxoutput_a0_DATAD_routing_wire_inst (
+	.datain(trcutInstance_asdffInstance_asdff2_adffinstance_aQ_aq),
+	.dataout(trcutInstance_asdffInstance_asdff3_amuxoutput_a0_DATAD_driver));
+
+// Location: LCCOMB_X19_Y1_N22
+cycloneiv_lcell_comb trcutInstance_asdffInstance_asdff3_amuxoutput_a0(
+// Equation(s):
+// trcutInstance_asdffInstance_asdff3_amuxoutput_a0_combout = (SE_ainput_o & trcutInstance_asdffInstance_asdff2_adffinstance_aQ_aq)
+
+	.dataa(trcutInstance_asdffInstance_asdff3_amuxoutput_a0_DATAA_driver),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(trcutInstance_asdffInstance_asdff3_amuxoutput_a0_DATAD_driver),
+	.cin(gnd),
+	.combout(trcutInstance_asdffInstance_asdff3_amuxoutput_a0_combout),
+	.cout());
+// synopsys translate_off
+defparam trcutInstance_asdffInstance_asdff3_amuxoutput_a0.lut_mask = 16'hAA00;
+defparam trcutInstance_asdffInstance_asdff3_amuxoutput_a0.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff3_adffinstance_aQ_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(trcutInstance_asdffInstance_asdff3_adffinstance_aQ_CLK_driver));
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff3_adffinstance_aQ_D_routing_wire_inst (
+	.datain(trcutInstance_asdffInstance_asdff3_amuxoutput_a0_combout),
+	.dataout(trcutInstance_asdffInstance_asdff3_adffinstance_aQ_D_driver));
+
+// Location: FF_X19_Y1_N23
+dffeas trcutInstance_asdffInstance_asdff3_adffinstance_aQ(
+	.clk(trcutInstance_asdffInstance_asdff3_adffinstance_aQ_CLK_driver),
+	.d(trcutInstance_asdffInstance_asdff3_adffinstance_aQ_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(trcutInstance_asdffInstance_asdff3_adffinstance_aQ_aq),
+	.prn(vcc));
+// synopsys translate_off
+defparam trcutInstance_asdffInstance_asdff3_adffinstance_aQ.is_wysiwyg = "true";
+defparam trcutInstance_asdffInstance_asdff3_adffinstance_aQ.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff4_amuxoutput_a0_DATAC_routing_wire_inst (
+	.datain(trcutInstance_asdffInstance_asdff3_adffinstance_aQ_aq),
+	.dataout(trcutInstance_asdffInstance_asdff4_amuxoutput_a0_DATAC_driver));
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff4_amuxoutput_a0_DATAD_routing_wire_inst (
+	.datain(SE_ainput_o),
+	.dataout(trcutInstance_asdffInstance_asdff4_amuxoutput_a0_DATAD_driver));
+
+// Location: LCCOMB_X19_Y1_N28
+cycloneiv_lcell_comb trcutInstance_asdffInstance_asdff4_amuxoutput_a0(
+// Equation(s):
+// trcutInstance_asdffInstance_asdff4_amuxoutput_a0_combout = (trcutInstance_asdffInstance_asdff3_adffinstance_aQ_aq & SE_ainput_o)
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(trcutInstance_asdffInstance_asdff4_amuxoutput_a0_DATAC_driver),
+	.datad(trcutInstance_asdffInstance_asdff4_amuxoutput_a0_DATAD_driver),
+	.cin(gnd),
+	.combout(trcutInstance_asdffInstance_asdff4_amuxoutput_a0_combout),
+	.cout());
+// synopsys translate_off
+defparam trcutInstance_asdffInstance_asdff4_amuxoutput_a0.lut_mask = 16'hF000;
+defparam trcutInstance_asdffInstance_asdff4_amuxoutput_a0.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff4_adffinstance_aQ_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(trcutInstance_asdffInstance_asdff4_adffinstance_aQ_CLK_driver));
+
+cycloneiv_routing_wire trcutInstance_asdffInstance_asdff4_adffinstance_aQ_D_routing_wire_inst (
+	.datain(trcutInstance_asdffInstance_asdff4_amuxoutput_a0_combout),
+	.dataout(trcutInstance_asdffInstance_asdff4_adffinstance_aQ_D_driver));
+
+// Location: FF_X19_Y1_N29
+dffeas trcutInstance_asdffInstance_asdff4_adffinstance_aQ(
+	.clk(trcutInstance_asdffInstance_asdff4_adffinstance_aQ_CLK_driver),
+	.d(trcutInstance_asdffInstance_asdff4_adffinstance_aQ_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(trcutInstance_asdffInstance_asdff4_adffinstance_aQ_aq),
+	.prn(vcc));
+// synopsys translate_off
+defparam trcutInstance_asdffInstance_asdff4_adffinstance_aQ.is_wysiwyg = "true";
+defparam trcutInstance_asdffInstance_asdff4_adffinstance_aQ.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a0_DATAC_routing_wire_inst (
+	.datain(misrInstance_aMISR[3]),
+	.dataout(misrInstance_aMISR_a0_DATAC_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a0_DATAD_routing_wire_inst (
+	.datain(trcutInstance_asdffInstance_asdff4_adffinstance_aQ_aq),
+	.dataout(misrInstance_aMISR_a0_DATAD_driver));
+
+// Location: LCCOMB_X18_Y1_N6
+cycloneiv_lcell_comb misrInstance_aMISR_a0(
+// Equation(s):
+// misrInstance_aMISR_a0_combout = misrInstance_aMISR[3] $ (trcutInstance_asdffInstance_asdff4_adffinstance_aQ_aq)
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(misrInstance_aMISR_a0_DATAC_driver),
+	.datad(misrInstance_aMISR_a0_DATAD_driver),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a0_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a0.lut_mask = 16'h0FF0;
+defparam misrInstance_aMISR_a0.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a4_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a4_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a4_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a0_combout),
+	.dataout(misrInstance_aMISR_a4_a_D_driver));
+
+// Location: FF_X18_Y1_N7
+dffeas misrInstance_aMISR_a4_a(
+	.clk(misrInstance_aMISR_a4_a_CLK_driver),
+	.d(misrInstance_aMISR_a4_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a4_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a4_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a5_a_afeeder_DATAD_routing_wire_inst (
+	.datain(misrInstance_aMISR[4]),
+	.dataout(misrInstance_aMISR_a5_a_afeeder_DATAD_driver));
+
+// Location: LCCOMB_X18_Y1_N28
+cycloneiv_lcell_comb misrInstance_aMISR_a5_a_afeeder(
+// Equation(s):
+// misrInstance_aMISR_a5_a_afeeder_combout = misrInstance_aMISR[4]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(misrInstance_aMISR_a5_a_afeeder_DATAD_driver),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a5_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a5_a_afeeder.lut_mask = 16'hFF00;
+defparam misrInstance_aMISR_a5_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a5_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a5_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a5_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a5_a_afeeder_combout),
+	.dataout(misrInstance_aMISR_a5_a_D_driver));
+
+// Location: FF_X18_Y1_N29
+dffeas misrInstance_aMISR_a5_a(
+	.clk(misrInstance_aMISR_a5_a_CLK_driver),
+	.d(misrInstance_aMISR_a5_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a5_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a5_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a6_a_afeeder_DATAD_routing_wire_inst (
+	.datain(misrInstance_aMISR[5]),
+	.dataout(misrInstance_aMISR_a6_a_afeeder_DATAD_driver));
+
+// Location: LCCOMB_X18_Y1_N26
+cycloneiv_lcell_comb misrInstance_aMISR_a6_a_afeeder(
+// Equation(s):
+// misrInstance_aMISR_a6_a_afeeder_combout = misrInstance_aMISR[5]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(misrInstance_aMISR_a6_a_afeeder_DATAD_driver),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a6_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a6_a_afeeder.lut_mask = 16'hFF00;
+defparam misrInstance_aMISR_a6_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a6_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a6_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a6_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a6_a_afeeder_combout),
+	.dataout(misrInstance_aMISR_a6_a_D_driver));
+
+// Location: FF_X18_Y1_N27
+dffeas misrInstance_aMISR_a6_a(
+	.clk(misrInstance_aMISR_a6_a_CLK_driver),
+	.d(misrInstance_aMISR_a6_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a6_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a6_a.power_up = "low";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a7_a_afeeder_DATAC_routing_wire_inst (
+	.datain(misrInstance_aMISR[6]),
+	.dataout(misrInstance_aMISR_a7_a_afeeder_DATAC_driver));
+
+// Location: LCCOMB_X18_Y1_N24
+cycloneiv_lcell_comb misrInstance_aMISR_a7_a_afeeder(
+// Equation(s):
+// misrInstance_aMISR_a7_a_afeeder_combout = misrInstance_aMISR[6]
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(misrInstance_aMISR_a7_a_afeeder_DATAC_driver),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(misrInstance_aMISR_a7_a_afeeder_combout),
+	.cout());
+// synopsys translate_off
+defparam misrInstance_aMISR_a7_a_afeeder.lut_mask = 16'hF0F0;
+defparam misrInstance_aMISR_a7_a_afeeder.sum_lutc_input = "datac";
+// synopsys translate_on
+
+cycloneiv_routing_wire misrInstance_aMISR_a7_a_CLK_routing_wire_inst (
+	.datain(CLK_ainputclkctrl_outclk),
+	.dataout(misrInstance_aMISR_a7_a_CLK_driver));
+
+cycloneiv_routing_wire misrInstance_aMISR_a7_a_D_routing_wire_inst (
+	.datain(misrInstance_aMISR_a7_a_afeeder_combout),
+	.dataout(misrInstance_aMISR_a7_a_D_driver));
+
+// Location: FF_X18_Y1_N25
+dffeas misrInstance_aMISR_a7_a(
+	.clk(misrInstance_aMISR_a7_a_CLK_driver),
+	.d(misrInstance_aMISR_a7_a_D_driver),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(misrInstance_aMISR[7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam misrInstance_aMISR_a7_a.is_wysiwyg = "true";
+defparam misrInstance_aMISR_a7_a.power_up = "low";
+// synopsys translate_on
+
+assign sign = sign_aoutput_o;
+
+endmodule

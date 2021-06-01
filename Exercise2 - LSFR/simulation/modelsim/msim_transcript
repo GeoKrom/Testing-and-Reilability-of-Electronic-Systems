@@ -1,0 +1,131 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do LSFRCircuit_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/LFSR_8bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module LFSR_8bit
+# 
+# Top level modules:
+# 	LFSR_8bit
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/TRCUT.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module TRCUT
+# 
+# Top level modules:
+# 	TRCUT
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/SDFFChain.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SDFFChain
+# 
+# Top level modules:
+# 	SDFFChain
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/CUT.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CUT
+# 
+# Top level modules:
+# 	CUT
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/SDFF.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SDFF
+# 
+# Top level modules:
+# 	SDFF
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/MyDFF.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MyDFF
+# 
+# Top level modules:
+# 	MyDFF
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/MISR_16bits.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MISR_16bits
+# 
+# Top level modules:
+# 	MISR_16bits
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/TRCUTwithMISR.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module TRCUTwithMISR
+# 
+# Top level modules:
+# 	TRCUTwithMISR
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR {C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/TRCUTwithMISRtb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module TRCUTwithMISRtb
+# 
+# Top level modules:
+# 	TRCUTwithMISRtb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  TRCUTwithMISRtb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps TRCUTwithMISRtb 
+# Loading work.TRCUTwithMISRtb
+# Loading work.TRCUTwithMISR
+# Loading work.LFSR_8bit
+# Loading work.TRCUT
+# Loading work.SDFFChain
+# Loading work.SDFF
+# Loading work.MyDFF
+# Loading work.CUT
+# Loading work.MISR_16bits
+# ** Warning: (vsim-3015) C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/TRCUT.v(14): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'DI3'. The port definition is at: C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/SDFFChain.v(3).
+# 
+#         Region: /TRCUTwithMISRtb/dut/trcutInstance/sdffInstance
+# ** Warning: (vsim-3015) C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/TRCUT.v(14): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'DI4'. The port definition is at: C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/SDFFChain.v(3).
+# 
+#         Region: /TRCUTwithMISRtb/dut/trcutInstance/sdffInstance
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit 
+# Break in Module LFSR_8bit in file C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/LFSR_8bit.v
+# Simulation Breakpoint: Break in Module LFSR_8bit in file C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/LFSR_8bit.v
+# MACRO ./LSFRCircuit_run_msim_rtl_verilog.do PAUSED at line 24
+add wave -position insertpoint  \
+sim:/TRCUTwithMISRtb/dut/lsfr_out \
+sim:/TRCUTwithMISRtb/dut/misr_output
+restart
+# ** Warning: (vsim-3015) C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/TRCUT.v(14): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'DI3'. The port definition is at: C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/SDFFChain.v(3).
+# 
+#         Region: /TRCUTwithMISRtb/dut/trcutInstance/sdffInstance
+# ** Warning: (vsim-3015) C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/TRCUT.v(14): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'DI4'. The port definition is at: C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/SDFFChain.v(3).
+# 
+#         Region: /TRCUTwithMISRtb/dut/trcutInstance/sdffInstance
+run -all
+add wave -position insertpoint  \
+sim:/TRCUTwithMISRtb/dut/trcutInstance/SO \
+sim:/TRCUTwithMISRtb/dut/trcutInstance/i_out \
+sim:/TRCUTwithMISRtb/dut/trcutInstance/j_out \
+sim:/TRCUTwithMISRtb/dut/trcutInstance/SOa \
+sim:/TRCUTwithMISRtb/dut/trcutInstance/SOb \
+sim:/TRCUTwithMISRtb/dut/trcutInstance/SOc
+restart
+# ** Warning: (vsim-3015) C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/TRCUT.v(14): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'DI3'. The port definition is at: C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/SDFFChain.v(3).
+# 
+#         Region: /TRCUTwithMISRtb/dut/trcutInstance/sdffInstance
+# ** Warning: (vsim-3015) C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/TRCUT.v(14): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'DI4'. The port definition is at: C:/Users/geokr/OneDrive/Desktop/Projects/TestingRelElecSys/LSFR/SDFFChain.v(3).
+# 
+#         Region: /TRCUTwithMISRtb/dut/trcutInstance/sdffInstance
+run -all
+# Break key hit 
+# Simulation stop requested.
+run
+run
+run
+run
+run
+run -continue
+# Break key hit 
