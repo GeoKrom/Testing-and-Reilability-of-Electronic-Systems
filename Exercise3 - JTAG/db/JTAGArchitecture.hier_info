@@ -1,0 +1,44 @@
+|TapControllerFSM
+TCK => state[0]~reg0.CLK
+TCK => state[1]~reg0.CLK
+TCK => state[2]~reg0.CLK
+TCK => state[3]~reg0.CLK
+TMS => Mux2.IN11
+TMS => Mux0.IN13
+TMS => Mux3.IN13
+TMS => Mux3.IN14
+TMS => Mux0.IN14
+TMS => Mux3.IN15
+TMS => Mux0.IN15
+TMS => Mux2.IN12
+TMS => Mux1.IN13
+TMS => Mux1.IN14
+TMS => Mux2.IN13
+TMS => Mux2.IN14
+TMS => Mux1.IN15
+TMS => Mux2.IN15
+TMS => Mux0.IN12
+TMS => Mux1.IN11
+TMS => Mux1.IN12
+TMS => Mux2.IN6
+TMS => Mux2.IN7
+TMS => Mux2.IN8
+TMS => Mux2.IN9
+TMS => Mux2.IN10
+TMS => Mux3.IN6
+TMS => Mux3.IN7
+TMS => Mux3.IN8
+TMS => Mux3.IN9
+TMS => Mux3.IN10
+TMS => Mux3.IN11
+TMS => Mux3.IN12
+TRST => state.OUTPUTSELECT
+TRST => state.OUTPUTSELECT
+TRST => state.OUTPUTSELECT
+TRST => state.OUTPUTSELECT
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[2] <= state[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[3] <= state[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
