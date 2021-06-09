@@ -13,7 +13,7 @@ module TapControllerFSM(TCK, TMS, TRST, state);
 	
 	//--------Wires and Regs--------//
 	wire TCK, TMS, TRST;
-	reg [FSM_SIZE-1:0] next_state;
+	reg [FSM_SIZE-1:0] next_state = 4'b0000;
 	
 	//--------FSM States--------//
 	parameter TEST_LOGIC_RESET = 0;
@@ -35,81 +35,82 @@ module TapControllerFSM(TCK, TMS, TRST, state);
 	
 	//--------FSM Code Starts Here--------//
 	//--------For debugging purposes--------//
-	reg [16*3:0] STATE_AS_STR;
+	reg [255:0] STATE_AS_STR;
 	always @ (state)
 	begin
 		case(state)
 			TEST_LOGIC_RESET:
-			begin
-				STATE_AS_STR<="Test_Logic_Reset";
-			end
+				begin
+					STATE_AS_STR<="Test_Logic_Reset";
+				end
 			RUN_TEST_IDLE:
-			begin
-				STATE_AS_STR<="Run_Test_Idle";
-			end
+				begin
+					STATE_AS_STR<="Run_Test_Idle";
+				end
 			SELECT_DR_SCAN:
-			begin
-				STATE_AS_STR<="Select_DR_Scan";
-			end
+				begin
+					STATE_AS_STR<="Select_DR_Scan";
+				end
 			CAPTURE_DR:
-			begin
-				STATE_AS_STR<="Capture_DR";
-			end
+				begin
+					STATE_AS_STR<="Capture_DR";
+				end
 			SHIFT_DR:
-			begin
-				STATE_AS_STR<="Shift_DR";
-			end
+				begin
+					STATE_AS_STR<="Shift_DR";
+				end
 			EXIT1_DR:
-			begin
-				STATE_AS_STR<="Exit1_DR";
-			end
+				begin
+					STATE_AS_STR<="Exit1_DR";
+				end
 			PAUSE_DR:
-			begin
-				STATE_AS_STR<="Pause_DR";
-			end
+				begin
+					STATE_AS_STR<="Pause_DR";
+				end
 			EXIT2_DR:
-			begin
-				STATE_AS_STR<="Exit2_DR";
-			end
+				begin
+					STATE_AS_STR<="Exit2_DR";
+				end
 			UPDATE_DR:
-			begin
-				STATE_AS_STR<="Update_DR";
-			end
+				begin
+					STATE_AS_STR<="Update_DR";
+				end
 			SELECT_IR_SCAN:
-			begin
-				STATE_AS_STR<="Select_IR_Scan";
-			end
+				begin
+					STATE_AS_STR<="Select_IR_Scan";
+				end
 			CAPTURE_IR:
-			begin
-				STATE_AS_STR<="Capture_IR";
-			end
+				begin
+					STATE_AS_STR<="Capture_IR";
+				end
 			SHIFT_IR:
-			begin
-				STATE_AS_STR<="Shift_IR";
-			end
+				begin
+					STATE_AS_STR<="Shift_IR";
+				end
 			EXIT1_IR:
-			begin
-				STATE_AS_STR<="Exit1_IR";
-			end
+				begin
+					STATE_AS_STR<="Exit1_IR";
+				end
 			PAUSE_IR:
-			begin
-				STATE_AS_STR<="Pause_IR";
-			end
+				begin
+					STATE_AS_STR<="Pause_IR";
+				end
 			EXIT2_IR:
-			begin
-				STATE_AS_STR<="Exit2_IR";
-			end
+				begin
+					STATE_AS_STR<="Exit2_IR";
+				end
 			UPDATE_IR:
-			begin
-				STATE_AS_STR<="Update_IR";
-			end
+				begin
+					STATE_AS_STR<="Update_IR";
+				end
 		endcase	
 	end
 	//
 	
+	//--------Asychronous FSM--------//
+	//--------For every value of TMS signal change state--------//
 	always @ (state, TMS)
 	begin: MAIN_FSM_ASYCHRONOUS
-		next_state = 4'b0000;
 		case(state)
 			TEST_LOGIC_RESET:
 				if(TMS == 1'b1) begin
@@ -210,9 +211,11 @@ module TapControllerFSM(TCK, TMS, TRST, state);
 			default: next_state = TEST_LOGIC_RESET;
 		endcase
 	end
+	//
 	
+   //--------Sychronous FSM--------//
 	always @ (posedge TCK)
-	begin: MAIN_FSM
+	begin
 		if(TRST == 1'b1) begin
 			state <= #1 TEST_LOGIC_RESET;
 		end else begin
