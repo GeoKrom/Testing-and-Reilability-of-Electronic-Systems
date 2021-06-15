@@ -16,7 +16,7 @@ module TapControllerFSMtb();
 		end
 	end
 	//
-	always begin
+	initial begin
 		TRSTtb = 1;
 		#100 TRSTtb = 0;
 		#100 TMStb = 1;
