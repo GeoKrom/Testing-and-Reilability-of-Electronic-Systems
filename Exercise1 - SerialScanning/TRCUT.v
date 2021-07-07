@@ -11,7 +11,7 @@ module TRCUT(SI, SE, CLK, SO);
 	wire SOa, SOb, SOc, SO;
 	
 	//Structure of the test circuit
-	SDFFChain sdffInstance(CLK, j_out, i_out, , , SI, SE, SOa, SOb, SOc, SO);
+	SDFFChain sdffInstance(CLK, j_out, i_out, 0, 0, SI, SE, SOa, SOb, SOc, SO);
 	CUT cutInstance(SOa, SOb, SOc, SO, i_out, j_out);
 
 endmodule
